@@ -1,13 +1,13 @@
 ﻿@model Student
 
-<h2 class="my-2 text-center">Create New Student</h2>
+<h2 class="my-2 text-center">Edit Student</h2>
 
-<form method="post" asp-action="create" asp-controller="Student" >
+<form method="post" asp-action="edit" asp-controller="Student">
 
     <table class="table table-striped mt-5 d-flex justify-content-center">
         <tr>
             <td class="pt-3" width="200">ID</td>
-            <td><input class="border rounded p-2" asp-for="ID" /></td>
+            <td><input class="border rounded p-2" style="cursor: not-allowed" asp-for="ID" readonly /></td>
         </tr>
         <tr>
             <td class="pt-3" width="200">Name</td>
@@ -19,12 +19,16 @@
         </tr>
         <tr>
             <td class="pt-3" width="200">Birth Date</td>
-            <td><input class ="border rounded p-2" asp-for="BirthDate" /></td>
+            <td><input class="border rounded p-2" asp-for="BirthDate" /></td>
         </tr>
+
     </table>
 
     <div class="text-center mt-4">
-        <button class="btn btn-success rounded" type="submit" value="Create">Create</button>
+        <button class="btn btn-warning text-white rounded" type="submit" value="Update">Update</button>
     </div>
 
 </form>
+
+
+
